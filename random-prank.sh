@@ -7,6 +7,13 @@
 
 #-------------------------------------------------------------------------------------------
 
+function f000() {
+	# noop just to mess with the target's head :)
+}
+
+
+#-------------------------------------------------------------------------------------------
+
 function f001() {
 	alias cat="ls -lah"
 }
@@ -39,7 +46,7 @@ function f003() {
 ## MAIN LOGIC OF RANDOMIZING A PRANK
 ############################################################################################
 
-RANDOM_NUMBER=$(( ( RANDOM % 3 )  + 1 ))
+RANDOM_NUMBER=$(( ( RANDOM % 4 ) ))
 FUNCTION_NAME=`printf f%03d $RANDOM_NUMBER`
 
 $FUNCTION_NAME 
