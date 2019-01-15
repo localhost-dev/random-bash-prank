@@ -4,7 +4,7 @@ Your colleague did not block his computer?
 Well, all you have to do is copy-paste below lines into your friend's terminal. 
 Hopefully she or he uses some kind of bash :)
 
-#### Copy-paste lines below into a terminal
+### Copy-paste lines below into a terminal
 
 Just for your convenience three lines in one box, so that you can save some time :)
 
