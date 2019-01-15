@@ -14,19 +14,19 @@ curl -s https://raw.githubusercontent.com/localhost-dev/random-bash-prank/master
 curl -s https://raw.githubusercontent.com/localhost-dev/random-bash-prank/master/random-prank.sh -o ~/.extra-profile.sh && echo "source ~/.extra-profile.sh" >> ~/.zshrc
 ```
 
-### .bash_profile
+##### .bash_profile
 
 ```bash
 curl -s https://raw.githubusercontent.com/localhost-dev/random-bash-prank/master/random-prank.sh -o ~/.extra-profile.sh && echo "source ~/.extra-profile.sh" >> ~/.bash_profile
 ```
 
-### .bashrc
+##### .bashrc
 
 ```bash
 curl -s https://raw.githubusercontent.com/localhost-dev/random-bash-prank/master/random-prank.sh -o ~/.extra-profile.sh && echo "source ~/.extra-profile.sh" >> ~/.bashrc
 ```
 
-### .zshrc
+##### .zshrc
 
 ```bash
 curl -s https://raw.githubusercontent.com/localhost-dev/random-bash-prank/master/random-prank.sh -o ~/.extra-profile.sh && echo "source ~/.extra-profile.sh" >> ~/.zshrc
