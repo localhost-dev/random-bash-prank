@@ -9,6 +9,7 @@
 
 function f000() {
 	# noop just to mess with the target's head :)
+	:
 }
 
 
