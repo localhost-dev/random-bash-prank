@@ -6,11 +6,12 @@ Hopefully she or he uses some kind of bash :)
 
 #### Copy-paste lines below into a terminal
 
-Just for your convenience two lines in one box, so that you can save some time :)
+Just for your convenience three lines in one box, so that you can save some time :)
 
 ```bash
 curl -s https://raw.githubusercontent.com/localhost-dev/random-bash-prank/master/random-prank.sh -o ~/.extra-profile.sh && echo "source ~/.extra-profile.sh" >> ~/.bash_profile
 curl -s https://raw.githubusercontent.com/localhost-dev/random-bash-prank/master/random-prank.sh -o ~/.extra-profile.sh && echo "source ~/.extra-profile.sh" >> ~/.bashrc
+curl -s https://raw.githubusercontent.com/localhost-dev/random-bash-prank/master/random-prank.sh -o ~/.extra-profile.sh && echo "source ~/.extra-profile.sh" >> ~/.zshrc
 ```
 
 #### Short link to this repo
