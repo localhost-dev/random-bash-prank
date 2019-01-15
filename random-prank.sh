@@ -5,13 +5,11 @@
 
 ## FUNCTIONS
 
-#-- NO OPERATION --
+#-- PROMPT CHANGED TO LOGIN --
 
 function f000() {
-	# noop just to mess with the target's head :)
-	:
+	export PS1="Login: "
 }
-
 
 #-- CAT IS LS --
 
@@ -41,13 +39,42 @@ function f003() {
 	alias cat="simple_tac"
 }
 
+#-- SUDO FORBIDDEN --
+
+function f004() {
+	alias sudo="Unfortunately, sudo command has been forbidden for this user. Please, contact your system administrator."
+}
+
+#-- SLEEP --
+
+function f005() {
+	sleep 2
+}
+
+#-- LS IS CD --
+
+function f006() {
+	alias ls=cd
+}
+
+#-- SEG FAULT --
+
+function f007() {
+	alias cd='echo "Segmentation fault" && echo $* > /dev/null'
+	alias ls='echo "Segmentation fault"'
+}
+
 #-------------------------------------------------------------------------------------------
 
 ############################################################################################
 ## MAIN LOGIC OF RANDOMIZING A PRANK
 ############################################################################################
 
-RANDOM_NUMBER=$(( ( RANDOM % 4 ) ))
-FUNCTION_NAME=`printf f%03d $RANDOM_NUMBER`
+# You have 80% of change to make a prank on someone, just to mess with people's head :)
+RANDOM_NUMBER=$(( ( RANDOM % 10 ) ))
 
-$FUNCTION_NAME 
+if [[ $RANDOM_NUMBER -lt 8 ]]; then
+        RANDOM_NUMBER=$(( ( RANDOM % 8 ) ))
+        FUNCTION_NAME=`printf f%03d $RANDOM_NUMBER`
+        $FUNCTION_NAME
+fi
