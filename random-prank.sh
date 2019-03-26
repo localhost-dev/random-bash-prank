@@ -48,7 +48,7 @@ function f004() {
 #-- SLEEP --
 
 function f005() {
-	sleep 2
+	sleep 5
 }
 
 #-- LS IS CD --
@@ -67,14 +67,10 @@ function f007() {
 #-------------------------------------------------------------------------------------------
 
 ############################################################################################
-## MAIN LOGIC OF RANDOMIZING A PRANK
+## RANDOMIZING A PRANK
 ############################################################################################
 
-# You have 80% of change to make a prank on someone, just to mess with people's head :)
-RANDOM_NUMBER=$(( ( RANDOM % 10 ) ))
+RANDOM_NUMBER=$(( ( RANDOM % 8 ) ))
+FUNCTION_NAME=`printf f%03d $RANDOM_NUMBER`
+$FUNCTION_NAME
 
-if [[ $RANDOM_NUMBER -lt 8 ]]; then
-        RANDOM_NUMBER=$(( ( RANDOM % 8 ) ))
-        FUNCTION_NAME=`printf f%03d $RANDOM_NUMBER`
-        $FUNCTION_NAME
-fi
