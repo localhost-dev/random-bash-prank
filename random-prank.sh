@@ -17,7 +17,6 @@ ALIASES=(
 
 	#-- PASSWORD PROMPT --
 	'echo -n "Enter your password: "; while true; do read -s password; echo ""; echo -n "Wrong password, please try again: "; done'
-	
 
 	#-- SUDO FORBIDDEN --
 	'alias sudo="Unfortunately, sudo command has been forbidden for this user. Please, contact your system administrator."'
