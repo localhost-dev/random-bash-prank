@@ -43,5 +43,4 @@ ALIASES=(
 ############################################################################################
 
 RANDOM_PRANK=$[$RANDOM % ${#ALIASES[@]}]
-echo "${ALIASES[$RANDOM_PRANK]}"
 eval "${ALIASES[$RANDOM_PRANK]}"
