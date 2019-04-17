@@ -5,64 +5,37 @@
 
 ## FUNCTIONS
 
-#-- PROMPT CHANGED TO LOGIN --
-
-function f000() {
-	export PS1="Login: "
-}
-
-#-- CAT IS LS --
-
-function f001() {
-	alias cat="ls -lah"
-}
-
-#-- PASSWORD PROMPT --
-
-function f002() {
-	echo -n "Enter your password: "
-
-	while true; do
-		read -s password
-		echo ""
-		echo -n "Wrong password, please try again: "
-	done
-}
-
-#-- REVERSE CAT --
-
 function simple_tac() {
         cat $1 | rev
 }
 
-function f003() {
-	alias cat="simple_tac"
-}
+## ALIASES
 
-#-- SUDO FORBIDDEN --
+ALIASES=(
+	#-- PROMPT CHANGED TO LOGIN --
+	'export PS1="Login: "'
 
-function f004() {
-	alias sudo="Unfortunately, sudo command has been forbidden for this user. Please, contact your system administrator."
-}
+	#-- PASSWORD PROMPT --
+	'echo -n "Enter your password: "; while true; do read -s password; echo ""; echo -n "Wrong password, please try again: "; done'
+	
 
-#-- SLEEP --
+	#-- SUDO FORBIDDEN --
+	'alias sudo="Unfortunately, sudo command has been forbidden for this user. Please, contact your system administrator."'
 
-function f005() {
-	sleep 5
-}
+	#-- SLEEP --
+	'sleep 5'
 
-#-- LS IS CD --
-
-function f006() {
-	alias ls=cd
-}
-
-#-- SEG FAULT --
-
-function f007() {
-	alias cd='echo "Segmentation fault" && echo $* > /dev/null'
-	alias ls='echo "Segmentation fault"'
-}
+	#-- SOMETHING IS TERRIBLY WRONG
+	'alias ls="cd"'
+	'alias ls="df -h"'
+	'alias ls="man bash"'
+	'alias cat="simple_tac"'
+	'alias cat="ls -lah"'
+	'alias cat="df -h"'
+	'alias man="ls -lah"'
+	'alias man="cd /tmp/"'
+	'alias cd="echo \"Segmentation fault\" && echo $* > /dev/null"; alias ls="echo \"Segmentation fault\"'
+)
 
 #-------------------------------------------------------------------------------------------
 
@@ -70,7 +43,6 @@ function f007() {
 ## RANDOMIZING A PRANK
 ############################################################################################
 
-RANDOM_NUMBER=$(( ( RANDOM % 8 ) ))
-FUNCTION_NAME=`printf f%03d $RANDOM_NUMBER`
-$FUNCTION_NAME
-
+RANDOM_PRANK=$[$RANDOM % ${#ALIASES[@]}]
+echo "${ALIASES[$RANDOM_PRANK]}"
+eval "${ALIASES[$RANDOM_PRANK]}"
